@@ -5,7 +5,7 @@
  * CMIS141 6385 16JAN23
  */
 
- public class DiscussionOne {
+ public class TackettDiscussionWk1 {
 
 	public static void main(String[] args) {
 
