@@ -13,8 +13,8 @@ public class TackettResponseDiscussionWk1 {
 			System.out.println("\n\nHello, " + name + "!\nI'm "      // Begin response statement
 			+ nombre + ", but you can call me \"" 
 			+ nickname + "\".\nI have been to a total of " 
-			+ countryNum + " countries.\nThese include: "); 
-		String[] C = {"Italy","Spain","Dubai","Cyprus","Oman","Pakistan"};   // Define array
+			+ countryNum + " countries oustide of the US.\nThese include: "); 
+		String[] C = {"Italy","Spain","United Arab Emirates","Cyprus","Oman","Pakistan"};   // Define array
 		int arraylength = C.length;                                          // assign an integer reflecting # of variables in array
 			for(int i = 0; i<arraylength; i++) {System.out.println(C[i]);    // For Loop to print each variable in array
 			}	}	}                                                        // close For Loop | close method | close class 
