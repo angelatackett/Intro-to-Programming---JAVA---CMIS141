@@ -9,11 +9,14 @@ public class ORDERINFOA1W2 {
 		
 		//initialize scanner
 		Scanner scan = new Scanner(System.in);
+        //establish format - used for $ prices
 		DecimalFormat df = new DecimalFormat("#,###.##");
+        //establish format- used for %
+        DecimalFormat dfp = new DecimalFormat("##");
 		
 		//declare variables
-		int customer_id, quantity, disc_cast, disc_percent;
-		double unit_price, subtotal,quant_cast, total_discounted;
+		int customer_id, quantity;
+		double unit_price, subtotal,quant_cast, disc_percent, total_discounted;
 		String prod_description;
 		double discount;
 		
@@ -63,22 +66,20 @@ public class ORDERINFOA1W2 {
 		quant_cast = (double) quantity;  //type cast for arithmetic operation
 		subtotal = unit_price * quant_cast;
 		
-		disc_cast = (int) discount; //type case for percentage conversion
-		disc_percent = (disc_cast * 100);
+		disc_percent = discount * 100.00;
 		// type cast disc_percent to double in order to find actual deducted
 				
-		System.out.print("\n\nORDER DETAILS\n------------\nCustomer ID: "
+		System.out.print("\n\nORDER DETAILS\n------------\n\nCustomer ID: "
 				+ customer_id);
 		
 		//printf format method
 		System.out.printf("\nUnit Price: $" + df.format(unit_price)); 
 		System.out.print("\nQuantity: "	+ quantity 
-				+ "\nProduct Description: " + prod_description
-				+ "\nProposed Discount: " + disc_percent + "%");
+				+ "\nProduct Description: " + prod_description);
 		
 		//printf format method
-		System.out.printf("\nSubtotal: $" + df.format(subtotal));
-		
+		System.out.printf("\n\nSubtotal: $" + df.format(subtotal));
+		System.out.print("\n\nProposed Discount: " + dfp.format(disc_percent) + "%");		
 	}
 
 }
