@@ -3,6 +3,10 @@ import java.text.DecimalFormat;
 import java.math.RoundingMode;
 
 // developer Angela Tackett CMIS 141 23JAN23
+/* This program will take user inputs for order details,
+ * calculate the discount percentage, the amount to be
+ * discounted, and return all order inputs and totals
+ * prior to (subtotal) and after discount is applied. */
 
 public class ORDERINFOA1W2 {
     	public static void main(String[] args) {
@@ -82,10 +86,10 @@ public class ORDERINFOA1W2 {
 		
 		//printf format method
 		System.out.printf("\n\nSubtotal: $" + df.format(subtotal));
-		System.out.print("\n\nProposed Discount: " + dfp.format(disc_percent) + "%");		
+		System.out.print("\n\nDiscount: " + dfp.format(disc_percent) + "%");		
 	
         System.out.print("\nDiscounted Amount: $" + df.format(tot_discounted) 
-        + "\nTotal Due: $" + df.format(total));
+        + "\n\nTotal Due: $" + df.format(total));
 
     }
 
