@@ -6,7 +6,9 @@ import java.math.RoundingMode;
 /* This program will take user inputs for order details,
  * calculate the discount percentage, the amount to be
  * discounted, and return all order inputs and totals
- * prior to (subtotal) and after discount is applied. */
+ * prior to (subtotal) and after discount is applied.
+ * Improper input data types will not be accepted by 
+ * program. */
 
 public class ORDERINFOA1W2 {
     	public static void main(String[] args) {
@@ -20,8 +22,8 @@ public class ORDERINFOA1W2 {
 		
 		//declare variables
 		int customer_id, quantity;
-		double unit_price, subtotal,quant_cast, disc_percent;
-        double tot_discounted, total;
+		double unit_price, subtotal, quant_cast;
+        double disc_percent, tot_discounted, total;
 		String prod_description;
 		double discount;
 		
@@ -69,9 +71,9 @@ public class ORDERINFOA1W2 {
 		
 		//ORDER DETAILS PRIOR TO APPLIED DISCOUNT
 		quant_cast = (double) quantity;  //type cast for arithmetic operation
-		subtotal = unit_price * quant_cast;
-        tot_discounted = subtotal * discount;
-        total = subtotal - tot_discounted;
+		subtotal = unit_price * quant_cast; //calculates total prior to discount added
+        tot_discounted = subtotal * discount; //calculates amount to be discounted
+        total = subtotal - tot_discounted; //calculates total after applied discount
 		
 		disc_percent = discount * 100.00;
 		// type cast disc_percent to double in order to find actual deducted
