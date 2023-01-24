@@ -1,6 +1,5 @@
 import java.util.*;
 import java.text.DecimalFormat;
-import java.math.RoundingMode;
 
 // developer Angela Tackett CMIS 141 23JAN23
 /* This program will take user inputs for order details,
@@ -28,7 +27,7 @@ public class ORDERINFOA1W2 {
 		double discount;
 		
 		//Instructions for user inputs
-		System.out.println("ORDER INSTRUCTIONS \n  "
+		System.out.println("\nORDER INSTRUCTIONS \n  "
 				+ "After entering inputs "
 				+ "press 'enter' or 'return'.\n");
 		
