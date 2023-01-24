@@ -16,7 +16,8 @@ public class ORDERINFOA1W2 {
 		
 		//declare variables
 		int customer_id, quantity;
-		double unit_price, subtotal,quant_cast, disc_percent, total_discounted;
+		double unit_price, subtotal,quant_cast, disc_percent;
+        double tot_discounted, total;
 		String prod_description;
 		double discount;
 		
@@ -65,6 +66,8 @@ public class ORDERINFOA1W2 {
 		//ORDER DETAILS PRIOR TO APPLIED DISCOUNT
 		quant_cast = (double) quantity;  //type cast for arithmetic operation
 		subtotal = unit_price * quant_cast;
+        tot_discounted = subtotal * discount;
+        total = subtotal - tot_discounted;
 		
 		disc_percent = discount * 100.00;
 		// type cast disc_percent to double in order to find actual deducted
@@ -80,6 +83,10 @@ public class ORDERINFOA1W2 {
 		//printf format method
 		System.out.printf("\n\nSubtotal: $" + df.format(subtotal));
 		System.out.print("\n\nProposed Discount: " + dfp.format(disc_percent) + "%");		
-	}
+	
+        System.out.print("\nDiscounted Amount: $" + df.format(tot_discounted) 
+        + "\nTotal Due: $" + df.format(total));
+
+    }
 
 }
