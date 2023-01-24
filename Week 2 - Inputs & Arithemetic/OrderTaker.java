@@ -10,6 +10,12 @@ import java.text.DecimalFormat;
  * program. */
 
 public class OrderTaker {
+    	/**
+    	 * @param args
+    	 */
+    	/**
+    	 * @param args
+    	 */
     	public static void main(String[] args) {
 		
 		//initialize scanner
@@ -92,8 +98,7 @@ public class OrderTaker {
         System.out.print("\nDiscounted Amount: $" + df.format(tot_discounted) 
         + "\n\nTotal Due: $" + df.format(total));
 
-        in.close();
-
+            scan.close();
     }
 
 }

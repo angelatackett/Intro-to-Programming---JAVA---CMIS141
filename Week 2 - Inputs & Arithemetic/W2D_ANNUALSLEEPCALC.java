@@ -51,6 +51,8 @@ public class W2D_ANNUALSLEEPCALC {
 		System.out.print("\n              Annual:    " 
 				+ sleepHours * daysInYear);	 
 
+				in.close();
+
 	}
 
 }

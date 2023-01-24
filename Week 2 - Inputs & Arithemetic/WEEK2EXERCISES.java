@@ -44,6 +44,8 @@ public class WEEK2EXERCISES {
             n4 = ++n2;  //increment
             System.out.print("\n" + n3 + "\n" + n4);
 
+            in.close();
+
         }
     
 }

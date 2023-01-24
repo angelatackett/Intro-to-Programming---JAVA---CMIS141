@@ -92,6 +92,8 @@ public class ORDERINFOA1W2 {
         System.out.print("\nDiscounted Amount: $" + df.format(tot_discounted) 
         + "\n\nTotal Due: $" + df.format(total));
 
+		scan.close();
+
     }
 
 }
