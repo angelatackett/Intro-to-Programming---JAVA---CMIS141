@@ -98,7 +98,6 @@ public class OrderTaker {
         System.out.print("\nDiscounted Amount: $" + df.format(tot_discounted) 
         + "\n\nTotal Due: $" + df.format(total));
 
-            scan.close();
     }
 
 }
