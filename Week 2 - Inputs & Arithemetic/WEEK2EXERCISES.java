@@ -40,8 +40,8 @@ public class WEEK2EXERCISES {
                + "(Press enter after each):");
             n1 = in.nextInt();
             n2 = in.nextInt();
-            n3 = ++n1;
-            n4 = ++n2;
+            n3 = ++n1;  //increment
+            n4 = ++n2;  //increment
             System.out.print("\n" + n3 + "\n" + n4);
 
         }
