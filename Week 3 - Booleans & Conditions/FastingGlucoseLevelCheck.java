@@ -22,8 +22,10 @@ public class FastingGlucoseLevelCheck {
 		while (glucLevel < 0) {
 			System.out.print("Please enter a valid FGL input: ");
 			glucLevel = in.nextInt();
-			//break; // break while loop
-			} if (glucLevel <= 70) {
+			//break; // break while loop - no break creates infinite loop if [commented out]
+			} 
+			
+			if (glucLevel <= 70) {
 				System.out.println("FGL considered HYPOGLYCEMIC!\n"
 						+ "SEEK MEDICAL ATTENTION NOW!");			
 			} else if (glucLevel >= 70 && glucLevel < 100) {
