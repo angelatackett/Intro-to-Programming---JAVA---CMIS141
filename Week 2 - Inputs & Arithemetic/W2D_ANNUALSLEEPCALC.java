@@ -1,19 +1,29 @@
-// Developer: Angela Tackett  CMIS 141  22JAN23
+/* Developer: Angela Tackett  CMIS 141  22JAN23
+This program will prompt user for avaerage amount
+of sleep per night and return calculation of average
+sleep per week, month and year - not to include leapyear.*/
+
 import java.util.*;
 
 public class W2D_ANNUALSLEEPCALC {
 
 	public static void main(String[] args) {
 
+		//declare variables
 		double sleepHours;
-		int daysInWeek = 7;
-		int daysInYear = 365;
+		int sleepInWeek, hoursOfSleep; 
+		int sleepInYear; 
+		final int daysInWeek = 7;
+		final int daysInYear = 365;
         
+		//initialize Scanner
+		Scanner in = new Scanner(System.in);
+
 		/* Create Dictionary to show days in each month
 		 * LinkedHashMap to keep keys in order of input*/
 		Map<String,Integer> d = new LinkedHashMap<>();
 
-        // put() method
+        // dictionary .put() method {key: month | value: days in month}
         d.put("JAN", 31);
         d.put("FEB", 28);
         d.put("MAR", 31);
@@ -26,30 +36,39 @@ public class W2D_ANNUALSLEEPCALC {
         d.put("NOV", 30);
         d.put("DEC", 31);
         //System.out.print(d+"\n"); //<<UNCOMMENT System.out to display dict
-					
-		Scanner in = new Scanner(System.in);
-						
+
+		// program instructions				
 		System.out.println("             ***SLEEP CALCULATOR***\n\n"
 				+ "This program will take your average nightly amount "
 				+ "of sleep and\nprovide you with your average sleep "
 				+ "per week, month, and year.\n\n            "
 				+ "[NOT INCLUDING LEAPYEARS]");
 		
+		// prompt for user input
 		System.out.print("\nInput average hours per night of sleep you get: ");
 		sleepHours = in.nextInt();
 		
-		System.out.println("\n\n-------------RESULTS----------------"
+		//type cast to convert double to int
+		hoursOfSleep = (int) sleepHours;  //double to int
+		sleepInWeek = hoursOfSleep * daysInWeek; //"
+		sleepInYear = hoursOfSleep * daysInYear; //"
+	
+		//return calculations for per week
+		System.out.printf("\n\n-------------RESULTS----------------"
 				+ "\n\nAverage hours of sleep per:\n\n              "
-				+ "Week:      " + sleepHours * daysInWeek
-				+ "\n              Month:");
+				+ "Week:      %,d", sleepInWeek);
+		System.out.print("\n              Month:\n");
 		
+		/*loops through each {k:v} and multiplies 
+		against user input for monthly sleep averages*/
 		for (Map.Entry<String,Integer> entry : d.entrySet())
-			System.out.println("                    " 
+			System.out.printf("                    " 
 					+ entry.getKey() + ": " 
-					+ entry.getValue() * sleepHours );
+					+ entry.getValue() * sleepHours + "\n");
 		
-		System.out.print("\n              Annual:    " 
-				+ sleepHours * daysInYear);	 
+		//sum of months for annual average sleep calculation
+		System.out.printf("\n              Annual:    %,d", 
+				sleepInYear);	 
 
 				in.close();
 
