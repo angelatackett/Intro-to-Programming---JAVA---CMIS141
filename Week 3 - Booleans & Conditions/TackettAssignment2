@@ -1,0 +1,20 @@
+/* Developer Angela Tackett
+CMIS 141 30JAN2023 Assignment 2
+
+This program prompts the user for two
+different numbers and a mathematical 
+function via a switch.
+*/
+
+import java.util.Scanner
+
+public class TackettAssignment2{
+
+    public static void main(String args[]) {
+
+
+
+
+    
+    }
+}
