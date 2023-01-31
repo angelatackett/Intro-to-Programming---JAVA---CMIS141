@@ -27,7 +27,7 @@ public class TackettAssignment2 {
 
         // prompt user | declare variables from int inputs
         System.out.print("Enter two numbers from 200 to 1000 \n"
-                +   "[separate numbers with a 'space']: ");
+             + "[separate numbers with a 'space']: ");
         no_1 = no.nextInt();
         no_2 = no.nextInt();
 
@@ -39,15 +39,13 @@ public class TackettAssignment2 {
                 +   "[separate numbers with a 'space']: ");
                 no_1 = no.nextInt();
                 no_2 = no.nextInt();
-            }
-            else if (no_2 < 200 || no_2 > 1000) {
+            } else if (no_2 < 200 || no_2 > 1000) {
                 System.out.println("Invalid Range");
                 System.out.print("Enter two numbers from 200 to 1000 \n"
                 +   "[separate numbers with a 'space']: ");
                 no_1 = no.nextInt();
                 no_2 = no.nextInt();             
-            }
-            else {
+            } else {
                 break;
             }
         }   
