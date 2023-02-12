@@ -2,6 +2,9 @@
  * CMIS 141 - Intro to Programming
  * 05 FEB 2023 
  * 
+ * This program prompts the user for a gamer's
+ * name and XP stats per level returning the 
+ * gamers' total score to include bonuses. 
  */
 
 import java.util.Scanner;
@@ -20,6 +23,7 @@ public class totalXP {
        
        Scanner in = new Scanner(System.in);
 
+       System.out.println("\n      XP Calculator\n");
         do {
               // user inputs name at prompt
             System.out.print("Enter name ['x' to exit]: ");
@@ -32,22 +36,29 @@ public class totalXP {
             do {
                 System.out.print("Enter Level 1 XP: ");
                 L1 = in.nextInt();
-                ES++;
             } while (L1 % 5 != 0 || L1 < 10 || L1 > 100);
+                if  (L1 % 5 == 0 || L1 >= 10 || L1 <= 100){
+                    ES++; // must have valid input to increment
+                }
 
               // user enters level II XP + ES increments by 1
             do {
                 System.out.print("Enter Level 2 XP: ");
                 L2 = in.nextInt();
-                ES++;
             } while (L2 % 5 != 0 || L2 < 10 || L2 > 100);
-        
+            if  (L2 % 5 == 0 || L2 >= 10 || L2 <= 100){
+                ES++; // must have valid input to increment
+            }
+
               // user enters level III XP + ES increments by 1
             do {
                 System.out.print("Enter Level 3 XP: ");
                 L3 = in.nextInt();
                 ES++;
             } while (L3 % 5 != 0 || L3 < 10 || L3 > 100);
+            if  (L3 % 5 == 0 || L3 >= 10 || L3 <= 100){
+                ES++; // must have valid input to increment
+            }
 
               // calculates total score based on computation guidelines
             double totalScore = ((L1 + (L1 * 0.20)) 
@@ -56,7 +67,7 @@ public class totalXP {
             + (ES + (ES * 0.60))); 
 
               // Display individual level XP, sum of ES increments, calc'd total
-            System.out.println("/t/t" + g_name);
+            System.out.println("\n\t" + g_name);
             System.out.println("----FINAL SCORES----");
             System.out.println();
             System.out.println("    LEVEL 1: " + L1 + " XP");
@@ -82,6 +93,4 @@ public class totalXP {
 
         in.close();  
         }
-    
     }
-
