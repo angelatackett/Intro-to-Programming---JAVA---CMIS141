@@ -10,7 +10,7 @@
 
  import java.util.Scanner;
 
- public class Week6Assignment5Tackett {
+ public class ConversionCrusher {
  
      
       // cubic feet to U.S. bushel method ---------------------|
@@ -129,7 +129,7 @@
                          
      
              }
-     
+             in.close();
          }	
  
      }
