@@ -1,5 +1,16 @@
-import java.util.Scanner;
+/*The TeamScoreAnalysis program is a Java console application 
+ * that prompts the user to input the number of robotics teams, team names, 
+ * and their scores. It then validates the input, calculates and displays 
+ * the highest score, lowest score, and the average score of all the teams. 
+ * It also assigns grades based on each team's score and displays the scores 
+ * and corresponding grades in a table. The program consists of several 
+ * methods, each responsible for a specific task, such as finding the index 
+ * of the minimum value, maximum value, and average of scores. 
+ * DEVELOPER:ANGELA_TACKETT
+ * DOD:28FEB2023
+ */
 
+import java.util.Scanner;
 public class TeamScoreAnalysis {
 	
 	public static void main(String[] args) {
@@ -7,7 +18,9 @@ public class TeamScoreAnalysis {
 		Scanner in = new Scanner(System.in);
 		
 		// Prompt user for # of and team information----------------------
-		System.out.print("Enter number of teams: ");
+        System.out.print("\n*** Welcome to the Team Score Analysis Program"
+             + "***\n");
+		System.out.print("\nEnter number of teams: ");
 		int numTeams = in.nextInt();
 		
 		// initialize separate arrays for team names and scores-----------
@@ -63,21 +76,17 @@ public class TeamScoreAnalysis {
 		
 		// DISPLAY high score | low score | average score----------------
 		System.out.println("The " + teamNames[maxIndex] 
-				+ " have the highest score at "
-				+ maxValue);
+				+ " have the highest score at " + maxValue);
 		System.out.println("The " + teamNames[minIndex]
-				+ " have the lowest score at "
-				+ teamScores[minIndex]);
+				+ " have the lowest score at " + teamScores[minIndex]);
 		System.out.printf("Total Teams average score is: %.2f",
 				 avgScore);
 		
-	
 		in.close();	
 	}
 		
-		
-		
-	// method() to find index of smallest value----------------
+	//------------------METHODS()--------------------------------			
+	// MinIndex() to find index of smallest value----------------
 	public static int MinIndex(int[] A) {
 		int minIndex = 0;
 		for (int i = 0; i < A.length; i++) {
@@ -88,7 +97,7 @@ public class TeamScoreAnalysis {
 		return minIndex;	
 	}
 	
-	// method() to find largest value--------------------------
+	// MaxValue() to find largest value--------------------------
 	public static int MaxValue(int[] B) {
 			int maxValue = B[0];
 			for (int i = 1; i < B.length; i++) {
@@ -99,7 +108,7 @@ public class TeamScoreAnalysis {
 			return maxValue;	
 	}
 	
-	// method() to find index of largest value-----------------
+	// MaxIndex() to find index of largest value-----------------
 	public static int MaxIndex(int[] C) {
 		int maxIndex = 0;
 		for (int i = 0; i < C.length; i++) {
@@ -110,7 +119,7 @@ public class TeamScoreAnalysis {
 		return maxIndex;	
 	}
 	
-	// method() to find average of scores----------------------
+	// Avg() to find average of scores---------------------------
 	public static double Avg(int[] D) {
 		double total = 0;
 		double avg = 0;
@@ -126,7 +135,7 @@ public class TeamScoreAnalysis {
 		return avg;
 	}
 	
-	// method() for calculation of grade----------------------
+	// Grades() for conversion team score to letter grade--------
 	public static char[] Grades(int[] score) {
 		char[] grades = new char[score.length];
 				
